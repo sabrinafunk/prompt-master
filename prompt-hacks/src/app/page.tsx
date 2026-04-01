@@ -38,24 +38,24 @@ export default async function Home() {
       <div className="w-full flex flex-col items-center bg-gray-50 min-h-screen">
         {/* Aurora Borealis Header Section (Full Width Hero) */}
         <div className="relative w-full overflow-hidden flex flex-col items-center pt-36 pb-24">
-           {/* Efeito Aurora Borealis Absoluto no Fundo (Intensidade Alta) */}
+           {/* Efeito Aurora Borealis Absoluto no Fundo (Lento e Posicionado na Esquerda) */}
            <div className="absolute inset-0 w-full h-full pointer-events-none select-none overflow-hidden">
                {/* Núcleo Central Pulsante Colorido */}
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-indigo-500/15 blur-[90px] rounded-full animate-pulse"></div>
+               <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-indigo-500/15 blur-[90px] rounded-full animate-pulse"></div>
                
-               {/* Nuvem Magnética Ciano (Acelerada, Sweeping) */}
-               <div className="absolute top-0 w-[200%] h-full flex items-center animate-aurasweep mix-blend-multiply opacity-100">
-                 <div className="w-[900px] h-[500px] bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[100px] rounded-full"></div>
+               {/* Nuvem Magnética Ciano (Movimentação suave na esquerda) */}
+               <div className="absolute top-0 -left-1/4 w-full h-full flex items-center animate-aurora mix-blend-multiply opacity-100">
+                 <div className="w-[900px] h-[600px] bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent blur-[120px] rounded-full"></div>
                </div>
 
-               {/* Nuvem Magnética Violeta (Lenta, Sweep com Atraso) */}
-               <div className="absolute top-0 w-[200%] h-full flex items-center animate-aurasweep [animation-delay:-1.5s] mix-blend-multiply opacity-100">
-                 <div className="w-[1000px] h-[600px] bg-gradient-to-r from-transparent via-violet-500/40 to-transparent blur-[100px] rounded-full ml-64"></div>
+               {/* Nuvem Magnética Violeta (Lenta, mais embaixo na esquerda com Atraso) */}
+               <div className="absolute -top-32 -left-10 w-full h-full flex items-center animate-aurora [animation-delay:-5s] mix-blend-multiply opacity-100">
+                 <div className="w-[800px] h-[500px] bg-gradient-to-r from-transparent via-violet-500/30 to-transparent blur-[130px] rounded-full"></div>
                </div>
                
-               {/* Nuvem Fúcsia de Contraste (Onda Terciária Profunda) */}
-               <div className="absolute bottom-0 w-[200%] h-[80%] flex items-center animate-aurasweep [animation-delay:-3s] mix-blend-multiply opacity-90">
-                 <div className="w-[800px] h-[400px] bg-gradient-to-r from-transparent via-fuchsia-400/30 to-transparent blur-[110px] rounded-full -ml-40"></div>
+               {/* Nuvem Fúcsia de Contraste (Onda Terciária Profunda mais na borda) */}
+               <div className="absolute top-1/4 -left-32 w-full h-full flex items-center animate-aurora [animation-delay:-10s] mix-blend-multiply opacity-90">
+                 <div className="w-[700px] h-[600px] bg-gradient-to-r from-transparent via-fuchsia-400/20 to-transparent blur-[140px] rounded-full"></div>
                </div>
 
                {/* Gradient Fade to Bottom seamlessly merging into the grid */}

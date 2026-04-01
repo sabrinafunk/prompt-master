@@ -13,13 +13,13 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       keyframes: {
-        aurasweep: {
-          "0%": { transform: "translateX(-200%)" },
-          "100%": { transform: "translateX(200%)" },
+        aurora: {
+          "0%, 100%": { transform: "translate(0%, 0%) scale(1)" },
+          "50%": { transform: "translate(-5%, 5%) scale(1.05)" },
         },
       },
       animation: {
-        aurasweep: "aurasweep 3s linear infinite",
+        aurora: "aurora 15s ease-in-out infinite",
       },
     },
   },
