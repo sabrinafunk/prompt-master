@@ -10,10 +10,10 @@ const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
 
 export async function createPromptAction(formData: FormData) {
-  // 1. Barreira de Segurança
-  const user = await getSessionUser();
-  if (!user) {
-    throw new Error("Acesso Negado: Apenas administradores logados.");
+  // 1. Barreira de Segurança (Role-Based Access Control - RBAC)
+  const isAdmin = await checkIsAdmin();
+  if (!isAdmin) {
+    throw new Error("Acesso Negado: Apenas administradores podem executar esta ação.");
   }
 
   // 2. Coletar dados do formulário
