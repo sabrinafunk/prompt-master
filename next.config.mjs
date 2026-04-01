@@ -12,6 +12,9 @@ const nextConfig = {
       { protocol: 'https', hostname: 'jqcudoqhwyerypxcrrek.supabase.co' },
       { protocol: 'https', hostname: 'arturbranchina.com.br' }
     ]
+  },
+  experimental: {
+    cpus: 1,
   }
 };
 export default nextConfig;
