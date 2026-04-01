@@ -3,7 +3,7 @@ import { PromptCard } from "@/components/prompts/PromptCard";
 import Link from "next/link";
 import { ArrowLeft, Sparkles } from "lucide-react";
 
-export const revalidate = 60; // 1 minute ISR
+export const dynamic = "force-dynamic";
 
 export default async function CategoryPage({ params }: { params: { id: string } }) {
   // Fetch Category

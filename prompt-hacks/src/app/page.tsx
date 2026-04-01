@@ -7,6 +7,8 @@ import { getSessionUser, checkIsAdmin } from "@/app/actions/auth";
 import { PromptCard } from "@/components/prompts/PromptCard";
 import { InfinitePromptGrid } from "@/components/prompts/InfinitePromptGrid";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const { data: categories } = await supabase
     .from("categories")
